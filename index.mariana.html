@@ -1,0 +1,120 @@
+l
+Copiar código
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Gonçalves</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS -->
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#"> 
+                   <img src="logi.html.jpg" alt="logo do portifolio">
+                </a>
+            </div><!--logo-->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#sobre-mim">Sobre mim</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+            </div>
+        </div><!--interface-->
+    </header>
+    
+    <main>
+        <section id="inicio" class="topo-do-site">
+            <div class="interface">
+               <div class="flex">
+                 <div class="txt-topo-do-site">
+                    <h1>MARIANA GONÇALVES DA SILVA SANTOS</h1>
+                    <p>Bem-vindo(a) ao meu portfólio! Estou no início da minha jornada criativa e estou empolgada para compartilhar meu crescimento e aprendizado. Fique à vontade para acompanhar meu desenvolvimento.</p>
+                 </div><!--txt-topo-do-site-->
+               </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre-mim">
+            <div class="interface">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Eu sou Mariana Gonçalves, uma entusiasta de desenvolvimento de sistemas com uma paixão por criar soluções inovadoras e impactantes. Atualmente, estou em uma jornada de aprendizado e crescimento na área de tecnologia. Sou dedicada, curiosa e sempre em busca de novos desafios para aprimorar minhas habilidades e expandir meu conhecimento. Adoro explorar novas tecnologias, trabalhar em projetos desafiadores e colaborar com pessoas criativas. Acompanhe meu portfólio para ver minhas conquistas e projetos mais recentes!</p>
+            </div><!--interface-->
+        </section><!--sobre-mim-->
+
+        <!-- Seção Formação -->
+        <section id="formacao">
+            <div class="interface">
+                <h2>Formação</h2>
+                <p>Detalhes sobre a formação acadêmica e profissional de Mariana.</p>
+            </div><!--interface-->
+        </section><!--formacao-->
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio">
+            <div class="interface">
+                <h2>Portfólio</h2>
+                <p>Exemplos de trabalhos e projetos realizados por Mariana.</p>
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <div class="interface">
+                <h2>Contato</h2>
+                <form id="contato-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    
+                    <label for="observacao">Observação:</label>
+                    <textarea id="observacao" name="observacao" rows="4" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div><!--interface-->
+        </section><!--contato-->
+    </main>
+
+    <!-- Script JavaScript -->
+    <script>
+        document.getElementById('contato-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            // Coleta os dados do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const observacao = document.getElementById('observacao').value;
+
+            // Validação simples
+            if (!nome || !email || !telefone || !observacao) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Processa o formulário
+            alert(Obrigado pelo contato, ${nome}! Seus dados foram enviados.);
+
+            // Limpa o formulário
+            document.getElementById('contato-form').reset();
+        });
+    </script>
+</body>
+</html>
